@@ -1,0 +1,406 @@
+:root {
+  --primary: #6a11cb;
+  --secondary: #2575fc;
+  --accent: #00c9a7;
+  --bg-light: #f9f9f9;
+  --text-dark: #1e1e1e;
+  --glass: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ==== Header === */
+header, .profile-header {
+  text-align: center;
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  padding: 3rem 1rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  transition: text-shadow 0.3s ease;
+}
+.profile-header h1:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px var(--accent);
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: glow 2s infinite alternate;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px var(--secondary); }
+  100% { box-shadow: 0 0 25px var(--primary); }
+}
+
+/* ==== Cards === */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--primary);
+}
+.card-title:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.btn-outline-primary {
+  border-radius: 30px;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--secondary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+/* ==== Flex Profile Layout ==== */
+.profile-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 30px 15px;
+}
+
+.profile-text h1 {
+  font-size: 2rem;
+}
+.profile-text p {
+  font-size: 1.1rem;
+  color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+  .profile-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-text {
+    text-align: center;
+  }
+}
+
+/* ==== Skills Section ==== */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card h3 {
+  color: #fffacd;
+  margin-bottom: 15px;
+}
+
+.skill-item p {
+  margin-bottom: 4px;
+}
+
+.progress {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: linear-gradient(to right, #00c9a7, #92fe9d);
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ==== Social Links ==== */
+.social-links a {
+  font-size: 32px;
+  margin: 0 15px;
+  color: #444;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* ==== Education Card ==== */
+.edu-card {
+  background: #ffffff;
+  border-left: 6px solid var(--primary);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.edu-card:hover {
+  background: #f1f3ff;
+  transform: translateY(-4px);
+}
+
+/* ==== Tag List ==== */
+.tag-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag-list li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #fff;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+.tag-list li:hover {
+  background: #00c9a7;
+  color: #000;
+}
+
+/* ==== Fade In Animation ==== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==== Footer ==== */
+footer {
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+/* ==== Contact Form ==== */
+#contact-form input, #contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#contact-form .btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+#contact-form .btn:hover {
+  background-color: var(--secondary);
+}
+
+/* ==== Popups ==== */
+.popup {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.popup-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+.about-section {
+  background: linear-gradient(135deg, #d0e8ff, #f8faff);
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin: 40px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  color: #2c3e50;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #00b894;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+.about-card {
+  background-color: #ffffffdd;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #2d3436;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.about-card strong {
+  color: #0984e3;
+}
+.dark-mode {
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar, 
+.dark-mode .profile-header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.dark-mode .card,
+.dark-mode .edu-card,
+.dark-mode .project {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+.dark-mode .skill-card {
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  color: white;
+}
+
+.dark-mode .progress {
+  background-color: #444;
+}
+
+.dark-mode .progress-bar {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+.dark-mode .tag-list li {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f0f0f0;
+}
+
+.dark-mode .tag-list li:hover {
+  background-color: #00c9a7;
+  color: black;
+}
+
+.dark-mode footer {
+  background: linear-gradient(to right, #000000, #434343);
+  color: white;
+}
+
+.dark-mode .popup-content {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-mode .btn-outline-light {
+  color: #fff;
+  border-color: #aaa;
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: #00c9a7;
+  color: black;
+}
+
+.dark-mode .btn-outline-primary {
+  border-color: #00c9a7;
+  color: #00c9a7;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #00c9a7;
+  color: #000;
+}
+/* === Events Calendar === */
+.event-card {
+  background: #fdfdfd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#events h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+    body::after {
+      content: '';
+      display: block;
+      height: 0;
+    }
+  </style>
+</head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohit Yadav | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      transition: background 0.3s, color 0.3s;
+      
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-rightt:30cm;
+      border-radius: 80%;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+      .profile-photo {
+  margin-bottom: 10px;
+}
+
+    
+    
+    .profile-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 20px 30px 20px;  
+    text-align: center;
+    position: relative;
+}
+
+    
+
+    .social-links a {
+      margin: 10px;
+      font-size: 1.5rem;
+      color: inherit;
+    }
+
+    .edu-card, .project {
+      background: var(--bs-light);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .edu-logo {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .resume-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f1f1f1;
+      margin-top: 40px;
+    }
+
+    .dark-mode {
+      background-color: #121212 !important;
+      color: #f0f0f0 !important;
+    }
+
+    .dark-mode .edu-card,
+    .dark-mode .project,
+    .dark-mode footer {
+      background-color: #1e1e1e !important;
+      color: #fff !important;
+    }
+
+    .dark-mode .navbar, .dark-mode .profile-header {
+      background-color: #212529 !important;
+    }
+
+    .dark-mode .btn-outline-light {
+      color: #fff;
+      border-color: #ccc;
+    }
+
+    .toggle-mode-btn {
+      margin-left: 10px;
+    }
+   
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">Rohit's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ngo">Social Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#accomplishments">Accomplishments</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hackathons">Hackathons</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-outline-light toggle-mode-btn" onclick="toggleDarkMode()">🌗</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="profile-header">
+<div class="profile-header profile-flex">
+  <img src="img/best.jpg" class="profile-photo">
+  <div class="profile-text">
+    <h1>Rohit Yadav</h1>
+    <p>Data Science & AI Enthusiast | Exploring the world of Web Development</p>
+  </div>
+</div>
+
+</header>
+
+<!-- Social Links -->
+<div class="text-center social-links">
+  <a href="mailto:ryadavrohit26@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  <a href="https://github.com/yadav-rohit26" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/rohit-yadav-bca2026" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+<!-- About -->
+<section class="about-section">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-card">
+    <p>
+      I'm a <strong>Data Science enthusiast</strong> currently expanding my skills in 
+      <strong>Full Stack Web Development</strong> using <strong>MERN</strong> 
+      <strong>JavaScript</strong>, with strong programming knowledge in <strong>Java</strong>. 
+      I’m passionate about <strong>Artificial Intelligence</strong> and aim to build smart, 
+      data-driven applications that combine intelligent insights with user-friendly design.
+    </p>
+  </div>
+</section>
+
+
+<section id="education" class="container my-5 fade-in">
+  <h2>Education</h2>
+
+  <!-- 10th -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popup10')">
+    <img src="img/rbic logo.jpeg" alt="APS Logo" class="edu-logo">
+    <div>
+      <strong>Secondary Education</strong><br>
+      <a href="https://schools.org.in/mathura/09140603612/sri-radha-bihari-inter-college.html" target="_blank">S R B Inter Coll Barsana, Mathura</a><br>
+      2020–2021<br>
+      <span class="view-more">View More</span>
+    </div>
+  </div>
+
+<!-- ADCA -->
+<div class="edu-card d-flex align-items-center" onclick="showPopup('popupADCA')">
+  <img src="img/future-it-coll-logo.jpeg" style="mix-blend-mode: multiply;" alt="APS Logo" class="edu-logo">
+  <div>
+    <strong>Advance Diploma in Computer Applications</strong><br>
+    <a href="https://futureitcollege.com" target="_blank">Future IT College, Agra</a><br>
+    2021–2022<br>
+    <span class="view-more">View More</span>
+  </div>
+</div>
+
+  <!-- 12th -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popup12')">
+    <img src="img/rbic logo.jpeg" alt="APS Logo" class="edu-logo">
+    <div>
+      <strong>Senior Secondary Education</strong><br>
+      <a href="https://schools.org.in/mathura/09140603612/sri-radha-bihari-inter-college.html" target="_blank">S R B Inter Coll Barsana, Mathura</a><br>
+      2022–2023<br>
+      <span class="view-more">View More</span>
+    </div>
+  </div>
+
+ 
+
+  <!-- College -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popupCollege')">
+    <img src="img/GLA_University_logo.png" alt="GLA Logo" class="edu-logo">
+    <div>
+      <strong>Bachelor of Computer Applications</strong><br>
+      <a href="https://www.gla.ac.in/" target="_blank">GLA University Mathura</a><br>
+      2023–2026<br>
+      <span class="view-more">View More</span>
+    </div>
+  </div>
+
+  <!-- Popups -->
+  <div id="popup10" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popup10')">&times;</span>
+      <h4>10th Summary:</h4>
+      <p><strong>Subjects studied:</strong> Science, Maths, English, Hindi, Sanskrit, Social Studies</p>
+      <p><strong>Scored:</strong> 80.5%</p>
+    </div>
+  </div>
+
+  <div id="popupADCA" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popupADCA')">&times;</span>
+      <h4>ADCA Summary:</h4>
+      <p><strong>Subjects studied:</strong> MS Office, Operating Systems, Networking, Web Technology</p>
+      <p><strong>Scored:</strong> 75%</p>
+    </div>
+  </div>
+
+  <div id="popup12" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popup12')">&times;</span>
+      <h4>Class 12th Summary:</h4>
+      <p><strong>Subjects studied:</strong> Physics, Chemistry, Maths, English, Hindi</p>
+      <p><strong>Scored:</strong> 87.6%</p>
+    </div>
+  </div>
+
+  <div id="popupCollege" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popupCollege')">&times;</span>
+      <h4>College Summary:</h4>
+      <p><strong>Branch:</strong> Bachelor of Computer Applications</p>
+      <p><strong>Status:</strong> Pursuing (2023–2026)</p>
+      <p><strong>Scored:</strong> Maintaining a CGPA of 8.33</p>
+    </div>
+  </div>
+</section>
+<script>
+function showPopup(id) {
+  document.getElementById(id).style.display = "block";
+}
+function hidePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
+
+
+
+<!-- NGO Experience -->
+<section id="ngo" class="container my-5">
+  <h2 style="color: #2e7d32;">Social Work</h2>
+  <div class="card shadow-sm p-4" style="background-color: #e8f5e9; border-left: 6px solid #2e7d32;">
+    <h5 class="card-title" style="color: #2e7d32;">🌱 Volunteer at Mahakumbha 2025</h5>
+    <p class="card-text" style="color: #2e7d32;">
+      Worked as a <strong>Volunteer for tech support</strong> at <strong>Netrakumbha (Mahakumbha) 2025</strong> for <strong>10 days</strong>, ensuring seamless setup and maintenance of equipment throughout the event. <br>
+      Provided <strong>technical assistance</strong> to medical staff and Volunteers, supporting patient registrations and referals. Contributed to campaign's success, facilitating services for over 320,000 patients. <br>
+      <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_mahakumbh2025-netrakumbha-volunteering-activity-7304812311527989248-leaZ?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw" target="_blank" class="btn btn-sm btn-outline-info">📄 Show Certificate</a>
+      
+    </p>
+  </div>
+</section>
+
+
+
+<!-- Skills -->
+<section id="skills" class="container my-5 fade-in">
+  <h2 style="text-align:center;">Skills</h2>
+  <div class="skills-container">
+
+    <!-- Programming Languages Card -->
+    <div class="skill-card">
+      <h3>💻 Programming Languages</h3>
+      <div class="skill-item"><p>Python</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>Java</p><div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
+      <div class="skill-item"><p>C</p><div class="progress"><div class="progress-bar" style="width: 70%;"></div></div></div>
+      <div class="skill-item"><p>C++</p><div class="progress"><div class="progress-bar" style="width: 78%;"></div></div></div>
+    </div>
+
+    <!-- Web Development Card -->
+    <div class="skill-card">
+      <h3>🌐 Web Development</h3>
+      <div class="skill-item"><p>HTML</p><div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
+      <div class="skill-item"><p>CSS</p><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+      <div class="skill-item"><p>JavaScript</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>React Js</p><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></div>
+      <div class="skill-item"><p>Bootstrap</p><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+    </div>
+
+    <!-- Data Science Card -->
+    <div class="skill-card">
+      <h3>📊 Data Science & AI</h3>
+      <div class="skill-item"><p>NumPy</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>Pandas</p><div class="progress"><div class="progress-bar" style="width: 82%;"></div></div></div>
+      <div class="skill-item"><p>Matplotlib</p><div class="progress"><div class="progress-bar" style="width: 78%;"></div></div></div>
+      <div class="skill-item"><p>Scikit-learn</p><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></div>
+    </div>
+
+    <!-- Database Card -->
+    <div class="skill-card">
+      <h3>🗄️ Database</h3>
+      <ul class="tag-list">
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>PostgreSQL</li>
+        <li>Oracle</li>
+      </ul>
+    </div>
+
+    <!-- Tools & Platforms Card -->
+    <div class="skill-card">
+      <h3>🛠️ Tools & Platforms</h3>
+      <ul class="tag-list">
+        <li>MS Excel</li>
+        <li>Google Sheets</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>Anaconda</li>
+        <li>ChatGPT</li>
+        <li>Google Colab</li>
+        <li>Kaggle</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills Card -->
+    <div class="skill-card">
+      <h3>🤝 Soft Skills</h3>
+      <ul class="tag-list">
+        <li>Problem-solving</li>
+        <li>Time Management</li>
+        <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Leadership</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="container my-5">
+  <section id="about" class="container my-5 fade-in">
+
+  <h2 class="mb-4">Projects</h2>
+  <div class="row g-4">
+    
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">📉 ETL Pipeline Using Apache Airflow</h5>
+          <p class="card-text">
+            <ul>
+                <li>Built an ETL pipeline to extract, transform and load weather data from APIs into PostgreSQL.</li>
+                <li>Used Airflow for scheduling and monitoring workflows; Docker and Astro for containerized deployment.</li>
+                <li>Ensured data quality, scalability and readiness for integration with dashboard and forecasting boards.</li>
+            </ul>
+            </p>
+          <a href="" target="_blank" class="btn btn-outline-primary btn-sm">🔗 View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">📊 Weather Data Dashboard – India</h5>
+          <p class="card-text">
+            <ul>
+              <li>Created an interactive PowerBI dashboard for weather data using maps, slicers, charts, bar, graphs, pie charts and KPIs.</li>
+            </ul>
+          </p>
+          <a href="" target="_blank" class="btn btn-outline-primary btn-sm">🔗 View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="accomplishments" class="container my-5 fade-in">
+  <h2 class="text-center mb-4" style="color: #051f3d;">🌟 Accomplishments</h2>
+  <div class="row g-4">
+
+    <!-- Neo Colab -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-primary border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-code text-primary me-2"></i>Numpy, Pandas, Scikit-learn, Matplotlib, Regression</h5>
+          <p class="card-text">Attended 5 days AIML workshop at GLA University conducted by Mr. Shubham Singhal(Coding Blocks).</p>
+          <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_aiml-artificialintelligence-machinelearning-activity-7304726911304273924-sEW1?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw
+          " target="_blank" class="btn btn-sm btn-outline-primary">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Udemy -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-success border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-network-wired text-success me-2"></i>Spring Boot – Udemy</h5>
+          <p class="card-text">Gained hands-on experience in Spring Boot through real-time projects.</p>
+          <a href="" target="_blank" class="btn btn-sm btn-outline-success">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- Python -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-warning border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fab fa-python text-warning me-2"></i>Python Programming - GeeksforGeeks</h5>
+          <p class="card-text">Complete Python programming course.</p>
+          <a href="" target="_blank" class="btn btn-sm btn-outline-info">📄 Show Certificate</a>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Python -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-warning border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-laptop-code text-warning me-2"></i>Summer Analytics'24 - IIT Guwahati</h5>
+          <p class="card-text">6 Weeks course on Data Analytics and Artificial Intelligence by ITT Guwahati</p>
+          <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_summeranalytics-iitguwahati-dataanalytics-activity-7229079400875446272-_gnL?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw" target="_blank" class="btn btn-sm btn-outline-info">📄 Show Certificate</a>
+         
+        </div>
+      </div>
+    </div>
+
+    
+
+     <!-- Java -->
+     <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-info border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-network-wired text-info me-2"></i>Java Full Stack Development – GeeksforGeeks</h5>
+          <ul class="small ps-3">
+            <li>Basic to Advance</li>
+            <li>Applets</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Backend</li>
+          </ul>
+          <span class="badge bg-warning text-dark">⏳ Ongoing</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="hackathons" class="container my-5 fade-in">
+  <h2 class="text-center mb-4" style="color: #051f3d;">⚡ Hackathons</h2>
+  <div class="row g-4">
+
+    <!-- Neo Colab -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-primary border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-code text-primary me-2"></i> Hack-Vision'25 @ GLAU</h5>
+          <p class="card-text"> Participated in a 9-hour hackathon organized by GLA University Mathura.</p>
+          <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_hackvision-glauniversity-technocrates-activity-7268599698754547712-KZrg?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw" target="_blank" class="btn btn-sm btn-outline-primary">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Udemy -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-success border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-code text-success me-2"></i> Tech-Shastra @ IIT Madras</h5>
+          <p class="card-text">Participated in coding competition organized by IIT Madras.</p>
+          <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_shaastraprogrammingcontest-shaastra2025-iitmadras-activity-7275462061927645185-UKYR?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw
+          " target="_blank" class="btn btn-sm btn-outline-success">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- Python -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-warning border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-laptop-code text-warning me-2"></i>SPHNIX'24- MNIT Jaipur</h5>
+          <p class="card-text">Participated in Web Development hackathon in MNIT Jaipur.</p>
+          <a href="https://www.linkedin.com/posts/rohit-yadav-bca2026_webathon-mnitjaipur-participationcertificate-activity-7263485320761925632-KTEI?utm_source=share&utm_medium=member_android&rcm=ACoAAEJ1GLAB9FxLd5sTX7DzVfXvqA-_lZ-WQgw" target="_blank" class="btn btn-sm btn-outline-info">📄 Show Certificate</a>
+         
+        </div>
+      </div>
+    </div>
+
+   
+    
+
+    
+  </div>
+</section>
+
+<section id="calendar" class="container my-5 fade-in">
+  <h2 class="text-center mb-4" style="color: #4a90e2;">📅Important Events </h2>
+  <div class="month-selector text-center mb-4">
+    <select id="monthSelect" class="form-select w-auto mx-auto" onchange="switchMonth()">
+      <option value="0">January</option>
+      <option value="1">February</option>
+      <option value="2">March</option>
+      <option value="3">April</option>
+      <option value="4">May</option>
+      <option value="5" selected>June</option>
+      <option value="6">July</option>
+      <option value="7">August</option>
+      <option value="8">September</option>
+      <option value="9">October</option>
+      <option value="10">November</option>
+      <option value="11">December</option>
+    </select>
+  </div>
+
+  <div class="calendar" id="calendarGrid"></div>
+
+  <!-- Event Popup -->
+  <div id="eventPopup" class="popup" onclick="hideEvent()">
+    <div class="popup-content">
+      <span class="close" onclick="hideEvent()">&times;</span>
+      <p id="eventText">Event details</p>
+    </div>
+  </div>
+</section>
+
+<style>
+ 
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 10px;
+    background: var(--calendar-bg, #f0f8ff);
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+
+  .calendar-day,
+  .calendar-header {
+    text-align: center;
+    padding: 8px 6px;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .calendar-header {
+    background: #0077cc;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .calendar-day {
+    background: var(--day-bg, #ffffff);
+    color: var(--day-color, #000);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .calendar-day.event {
+    background-color: var(--event-bg, #e3f2fd);
+    cursor: pointer;
+    border: 2px solid #2196f3;
+    font-weight: bold;
+    color: var(--event-color, #1565c0);
+  }
+
+  .calendar-day.empty {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  #eventPopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .popup-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .popup-content .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --calendar-bg: #1e1e2f;
+      --day-bg: #2a2a3d;
+      --day-color: #f0f0f0;
+      --event-bg: #374785;
+      --event-color: #fff;
+    }
+
+    .popup-content {
+      background: #2a2a3d;
+      color: #fff;
+    }
+  }
+
+</style>
+
+<script>
+  const events = {
+    '2025-06-27': ' Hogarth Worldwide Drive @ GLAU for BCA',
+    '2025-06-19': 'Start Backend',
+    '2025-06-21': 'UI/UX Workshop',
+    '2025-06-10': 'Start Frontend'
+  };
+
+  function showEvent(text) {
+    document.getElementById("eventText").innerText = text;
+    document.getElementById("eventPopup").style.display = "block";
+  }
+
+  function hideEvent() {
+    document.getElementById("eventPopup").style.display = "none";
+  }
+
+  function switchMonth() {
+    const month = parseInt(document.getElementById("monthSelect").value);
+    renderCalendar(month);
+  }
+
+  function renderCalendar(month) {
+    const calendar = document.getElementById("calendarGrid");
+    calendar.innerHTML = "";
+
+    const year = 2025;
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const daysOfWeek = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    for (let day of daysOfWeek) {
+      const div = document.createElement("div");
+      div.className = "calendar-header";
+      div.innerText = day;
+      calendar.appendChild(div);
+    }
+
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement("div");
+      empty.className = "calendar-day empty";
+      calendar.appendChild(empty);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateStr = `${year}-${(month+1).toString().padStart(2,'0')}-${day.toString().padStart(2,'0')}`;
+      const div = document.createElement("div");
+      div.className = "calendar-day";
+      div.innerText = day;
+
+      if (events[dateStr]) {
+        div.classList.add("event");
+        div.onclick = () => showEvent(`${dateStr}: ${events[dateStr]}`);
+      }
+      calendar.appendChild(div);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => renderCalendar(5));
+  
+</script>
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dark Mode Script -->
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
+<script>
+  const faders = document.querySelectorAll(".fade-in");
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <div class="mb-3">
+      <label for="name">Your Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email">Your Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Send Message</button>
+    <p id="formMsg" class="text-success" style="display: none; margin-top: 10px;">Thanks for contacting me! 😊</p>
+  </form>
+</section>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const formMsg = document.getElementById("formMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    fetch("https://formspree.io/f/mwpbngaj", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }).then(response => {
+      if (response.ok) {
+        formMsg.style.display = "block";
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    });
+  });
+</script>
+
+
+
+<!-- Footer -->
+<footer style="color: black;">
+  <p>© 2025 Rohit Yadav</p>
+</footer>
+
+ 
+
+</body>
+</html>
